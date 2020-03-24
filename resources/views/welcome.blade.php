@@ -1,89 +1,58 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ app()->getLocale() }}">
+<style>
+.top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+</style>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Template</title>
+	<link rel="stylesheet" href="{{asset('css/style.default.css')}}" type="text/css" />
+	<script type="text/javascript" src="{{asset('js/plugins/jquery-1.7.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/plugins/jquery-ui-1.8.16.custom.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/plugins/jquery.cookie.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/plugins/jquery.uniform.min.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/custom/general.js')}}"></script>
+	<script type="text/javascript" src="{{asset('js/custom/index.js')}}"></script>
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="screen" href="/css/style.ie9.css"/>
+	<![endif]-->
+	<!--[if IE 8]>
+		<link rel="stylesheet" media="screen" href="/css/style.ie8.css"/>
+	<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+    <div style="font-size:19pt; margin-top:5px; margin-left:90%;">
+        
+    <div class="flex-center position-ref full-height">
+                    @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Home</a>&nbsp; &nbsp;
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                       <u><a href="{{ route('login') }}">Login</a></u>&nbsp; &nbsp;
+
+                        @if (Route::has('register'))
+                          <u><a href="{{ route('register') }}">Register</a></u>
+                        @endif
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Projet :Prise des rendez vous | By NJT GROUP . 
-                </div>
-
-                
             </div>
         </div>
-    </body>
+    </div>
+</head>
+<body class="loginpage">
+	<div class="loginbox">
+		<div class="logo">
+			<center><img style="padding: 0px 0px 5px 0px;" src="{{asset('/images/icons/logo/logo.png')}}" alt="" /></center> <!-- margin:80px 0px -80px 0px; --></div></div>
+</body>
 </html>
+
+
+    
