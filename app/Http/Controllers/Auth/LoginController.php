@@ -36,4 +36,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    public function edit($id)
+    {
+        /*$user=User::find($id);
+        return view('modificationcompte',compact('user','id'));*/
+    }
 }
