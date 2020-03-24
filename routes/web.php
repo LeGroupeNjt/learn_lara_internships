@@ -56,3 +56,6 @@ Route::get('/home','HomeController@index')->name('home');
         Route::get('/consultations', ['middleware' => 'auth', 'uses' =>"ConsultationController@index"]);
     });
     
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
